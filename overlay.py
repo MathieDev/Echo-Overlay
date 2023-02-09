@@ -46,8 +46,6 @@ dpg.setup_dearpygui()
 
 with dpg.window(label="Echo Overlay, Welcome"):
     text_label = dpg.add_text("XYZ")
-    dpg.add_button(label="")
-    values = {}
     playerslot0 = dpg.add_text("Player #"+":")
     playerslot1 = dpg.add_text("Player #"+":")
     playerslot2 = dpg.add_text("Player #"+":")
