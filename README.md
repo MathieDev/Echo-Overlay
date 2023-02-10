@@ -16,5 +16,5 @@ Here's how to install and run it!
 
 ## Screenshots
 
-![App Screenshot](https://cdn.discordapp.com/attachments/976945071700181093/1073627842228781166/image.png)
+![App Screenshot](https://cdn.discordapp.com/attachments/976945071700181093/1073630838140440847/image.png)
 
