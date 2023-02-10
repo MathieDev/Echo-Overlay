@@ -38,6 +38,7 @@ def update_playerlistvalues():
                   dpg.set_value(globals()['playerslot' + str(i)], "Player #"+str(i)+": Player Not Detected")
               else:
                 dpg.set_value(globals()['playerslot' + str(i)], "Player #"+str(i)+": "+pm.read_string(BasePlayerList+result))
+        time.sleep(0.4)
 
 def update_speedvalue():
     while True:
@@ -47,9 +48,11 @@ def update_speedvalue():
 def update_ViewX():
     while True:
         dpg.set_value(ViewX_label, "ViewX: "+ str(round(pm.read_float(BaseView),2)))
+        time.sleep(0.4)
 def update_ViewY():
     while True:
         dpg.set_value(ViewY_label, "ViewY: "+ str(round(pm.read_float(BaseView+4),2)))
+        time.sleep(0.4)
 
 dpg.create_context()
 dpg.create_viewport(title='Echo Overlay', width=200, height=515)
