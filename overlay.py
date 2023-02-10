@@ -4,8 +4,14 @@ from pymem.process import *
 from pymem.ptypes import RemotePointer
 import dearpygui.dearpygui as dpg
 import threading
+import ctypes
+import sys
 
-pm = pymem.Pymem("echovr.exe")
+try:
+    pm = pymem.Pymem("echovr.exe")
+except Exception:
+    ctypes.windll.user32.MessageBoxW(0, "Game Not Found, make sure it's running!", "Error!", 1)
+    sys.exit(1)
 
 gameModule = module_from_name(pm.process_handle, "echovr.exe").lpBaseOfDll
 matchmakingModule = module_from_name(pm.process_handle, "pnsradmatchmaking.dll").lpBaseOfDll
