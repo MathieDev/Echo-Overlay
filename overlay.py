@@ -50,16 +50,13 @@ def update_ViewX():
 def update_ViewY():
     while True:
         dpg.set_value(ViewY_label, "ViewY: "+ str(round(pm.read_float(BaseView+4),2)))
-    
-
-def save_callback():
-    print("Save Clicked")
 
 dpg.create_context()
-dpg.create_viewport()
+dpg.create_viewport(title='Echo Overlay', width=200, height=515)
 dpg.setup_dearpygui()
 
 with dpg.window(label="Echo Overlay, Welcome"):
+    dpg.set_viewport_always_top(True)
     dpg.add_text("---------- Account Info ---------")
     dpg.add_text("Username: "+  pm.read_string(pnsovr + 0xA01B80))
     dpg.add_text("Scoped ID: "+  pm.read_string(pnsovr + 0xA01BF0))
